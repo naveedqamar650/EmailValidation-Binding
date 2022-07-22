@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Behaviors.Views.Login"
+             BackgroundColor="#104660"
+             >
+    <ContentPage.Content>
+        <StackLayout 
+            Padding="40" 
+            VerticalOptions="Center">
+
+            <Image 
+                Source="logo.png" 
+                WidthRequest="180" 
+                HeightRequest="180"
+                />
+
+            <Entry 
+                x:Name="txtName"
+                Placeholder="UserName" 
+                TextColor="White"
+                />
+            <Entry 
+                x:Name="txtPass"
+                Placeholder="Password" 
+                IsPassword="True" 
+                TextColor="White"
+                />
+
+            <Button
+                Text="Login"
+                BackgroundColor="Transparent"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                BorderColor="AliceBlue"
+                Clicked="Button_Clicked"
+                />
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                    <Span 
+                        Text="Don't have an Account?  " 
+                        TextColor="White">
+                    </Span>
+                    <Span
+                        Text="Regsiter"
+                        TextColor="white"
+                        FontAttributes="Bold"
+                        TextDecorations="Underline">
+                    </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="Gesture_Tap"
+                        />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
